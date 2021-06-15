@@ -1,0 +1,16 @@
+.card {
+  background-color: rgb(21, 196, 196);
+  width: 300px;
+  padding-bottom: 20px;
+  margin: 15px;
+  grid-row: auto;
+}
+
+.card__title {
+  font-size: 18px;
+  margin-left: 40px;
+}
+.card__li {
+  font-size: 16px;
+  padding: 5px;
+}

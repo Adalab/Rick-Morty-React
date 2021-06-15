@@ -1,0 +1,15 @@
+.filter__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.filter__label {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.filter__input {
+  border: solid 3px aquamarine;
+  background-color: rgb(82, 75, 75);
+  width: 250px;
+}

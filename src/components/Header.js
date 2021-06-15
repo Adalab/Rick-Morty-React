@@ -1,4 +1,5 @@
 import React from "react";
+import "../stylesheets/Header.scss";
 import logo from "../images/Rick_and_Morty_logo.png";
 
 function Header() {
