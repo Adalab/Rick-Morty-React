@@ -9,7 +9,7 @@ const CharacterList = (props) => {
 
   return (
     <section>
-      <ul className="cardList">{characterElements}</ul>;
+      <ul className="cardList">{characterElements}</ul>
     </section>
   );
 };

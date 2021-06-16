@@ -1,6 +1,8 @@
 import "../stylesheets/App.scss";
 import Header from "./Header";
+import CharacterDetail from "../components/CharacterDetail";
 import React, { useState, useEffect } from "react";
+import { Route, Switch } from "react-router-dom";
 import Main from "./Main";
 import getApiData from "../services/api";
 
@@ -17,7 +19,6 @@ const App = () => {
 
   //función manejadora
   const handleFilter = (data) => {
-    console.log(data);
     if (data.key === "name") {
       setFilterName(data.value);
     }
@@ -28,17 +29,36 @@ const App = () => {
 
   //render filter by name
   const filteredcharacters = characters.filter((character) => {
-    console.log(character.name);
     return character.name.toLowerCase().includes(filterName.toLowerCase());
   });
 
-  console.log("State filterName", filterName);
+  //console.log("State filterName", filterName);
+
+  //Route le pasa props a esta función
+  const renderCharacterDetail = (props) => {
+    const routeCharacterId = props.match.params.id;
+    //busco el personaje por su id
+    const foundCharacter = characters.find((character) => {
+      return character.id === routeCharacterId;
+    });
+    console.log(foundCharacter, routeCharacterId);
+    if (foundCharacter !== undefined) {
+      return <CharacterDetail />;
+    } else {
+      return <p>Personaje no encontrado</p>;
+    }
+  };
 
   return (
-    <div className="App">
+    <>
       <Header />
-      <Main characters={filteredcharacters} handleFilter={handleFilter} />
-    </div>
+      <Switch>
+        <Route exact path="/">
+          <Main characters={filteredcharacters} handleFilter={handleFilter} />
+        </Route>
+        <Route path="/character/:id" render={renderCharacterDetail} />
+      </Switch>
+    </>
   );
 };
 
