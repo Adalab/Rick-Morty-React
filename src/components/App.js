@@ -43,7 +43,7 @@ const App = () => {
     });
 
     if (foundCharacter !== undefined) {
-      return <CharacterDetail />;
+      return <CharacterDetail character={foundCharacter} />;
     } else {
       return <p>Personaje no encontrado</p>;
     }

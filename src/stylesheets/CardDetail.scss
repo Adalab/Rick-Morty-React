@@ -1,0 +1,25 @@
+.card__detail {
+  background-color: rgb(21, 196, 196);
+  margin-top: 20px;
+  margin-left: 30px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+
+  min-width: 500px;
+  max-width: 600px;
+}
+
+.card__detail-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__detail-title {
+  font-size: 24px;
+  padding-left: 40px;
+}
+.card__detail-dates {
+  font-size: 20px;
+  padding-bottom: 10px;
+}
