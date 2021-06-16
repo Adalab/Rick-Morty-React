@@ -39,7 +39,7 @@ const App = () => {
     const routeCharacterId = props.match.params.id;
     //busco el personaje por su id
     const foundCharacter = characters.find((character) => {
-      return character.id === routeCharacterId;
+      return character.id === parseInt(routeCharacterId);
     });
 
     if (foundCharacter !== undefined) {
