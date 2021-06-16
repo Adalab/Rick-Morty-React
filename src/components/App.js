@@ -22,7 +22,6 @@ const App = () => {
 
   //guardo en ls cada vez que cambia characters
   useEffect(() => {
-    console.log("guardando en ls", characters);
     ls.set("characters", characters);
   }, [characters]);
 
