@@ -48,7 +48,7 @@ const App = () => {
     if (foundCharacter !== undefined) {
       return <CharacterDetail character={foundCharacter} />;
     } else {
-      return <p>Personaje no encontrado</p>;
+      return <h3>El personaje que buscas no existe. ¡Vuelve a intentarlo!</h3>;
     }
   };
 
