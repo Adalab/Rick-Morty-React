@@ -1,9 +1,16 @@
 .card {
   background-color: rgb(21, 196, 196);
-  width: 300px;
+  width: 240px;
+  border-radius: 25px;
   padding-bottom: 20px;
   margin: 15px;
   grid-row: auto;
+}
+.card__img {
+  width: 200px;
+  padding-top: 15px;
+  padding-left: 20px;
+  border-radius: 25px;
 }
 
 .card__title {
@@ -13,4 +20,7 @@
 .card__li {
   font-size: 16px;
   padding: 5px;
+}
+.card__li-icon {
+  width: 40px;
 }
