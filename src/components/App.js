@@ -13,7 +13,7 @@ const App = () => {
 
   useEffect(() => {
     //pido datos solo cuando no los tengo al arrancar
-    if (characters.lenght === 0) {
+    if (characters.length === 0) {
       getApiData().then((charactersData) => {
         setCharacters(charactersData);
       });
