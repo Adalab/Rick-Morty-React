@@ -10,6 +10,7 @@ import getApiData from "../services/api";
 const App = () => {
   const [characters, setCharacters] = useState(ls.get("characters", []));
   const [filterName, setFilterName] = useState("");
+  const [filterSpecie, setFilterSpecie] = useState(ls.get("filterSpecie", ""));
 
   useEffect(() => {
     //pido datos solo cuando no los tengo al arrancar
@@ -25,17 +26,28 @@ const App = () => {
     ls.set("characters", characters);
   }, [characters]);
 
+  useEffect(() => {
+    ls.set("filterSpecie", filterSpecie);
+  }, [filterSpecie]);
+
   //función manejadora
   const handleFilter = (data) => {
     if (data.key === "name") {
       setFilterName(data.value);
+    } else if (data.key === "specie") {
+      console.log(data.key);
+      setFilterSpecie(data.value);
     }
   };
 
-  //render filter by name
-  const filteredcharacters = characters.filter((character) => {
-    return character.name.toLowerCase().includes(filterName.toLowerCase());
-  });
+  //render filter by name and specie
+  const filteredcharacters = characters
+    .filter((character) => {
+      return character.name.toLowerCase().includes(filterName.toLowerCase());
+    })
+    .filter((character) => {
+      return filterSpecie === "" ? true : character.specie === filterSpecie;
+    });
 
   //Route le pasa props a esta función
   const renderCharacterDetail = (props) => {
@@ -61,6 +73,7 @@ const App = () => {
             characters={filteredcharacters}
             handleFilter={handleFilter}
             filterName={filterName}
+            filterSpecie={filterSpecie}
           />
         </Route>
         <Route path="/character/:id" render={renderCharacterDetail} />

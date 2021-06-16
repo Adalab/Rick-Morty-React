@@ -29,11 +29,10 @@ const CharacterDetail = (props) => {
 
   return (
     <div>
-      <Link to="/">
-        <img className="card__icon" src={house} alt="Volver al inicio" />
-      </Link>
-
       <section className="card__detail">
+        <Link to="/">
+          <img className="card__icon" src={house} alt="Volver al inicio" />
+        </Link>
         <img
           className="card__detail-img"
           src={props.character.image}
