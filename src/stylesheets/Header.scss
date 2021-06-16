@@ -6,9 +6,22 @@
 }
 
 .header__logo {
-  width: 500px;
+  width: 350px;
+  margin-bottom: 20px;
 }
 
 .header__title {
-  font-size: 28px;
+  font-size: 30px;
+  color: rgb(21, 196, 196);
+}
+.header__hero {
+  width: 100vw;
+  height: 500px;
+}
+.hero {
+  width: 100%;
+  height: 500px;
+  background-image: url("../images/rick_morty.jpeg");
+  background-size: cover;
+  background-position: bottom;
 }
