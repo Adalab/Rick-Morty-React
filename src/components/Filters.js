@@ -20,6 +20,7 @@ const Filters = (props) => {
         type="text"
         name="name"
         id="name"
+        value={props.filterName}
         onChange={handleChange}
       />
     </form>

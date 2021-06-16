@@ -10,6 +10,7 @@ function Main(props) {
       <Filters
         handleFilter={props.handleFilter}
         characters={props.filteredcharacters}
+        filterName={props.filterName}
       />
       <CharacterList characters={props.characters} />
     </main>

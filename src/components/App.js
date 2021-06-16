@@ -4,18 +4,27 @@ import CharacterDetail from "../components/CharacterDetail";
 import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import Main from "./Main";
+import ls from "../services/local-storage";
 import getApiData from "../services/api";
 
 const App = () => {
-  const [characters, setCharacters] = useState([]);
+  const [characters, setCharacters] = useState(ls.get("characters", []));
   const [filterName, setFilterName] = useState("");
 
   useEffect(() => {
-    //a ejecutar en el montaje: pedir datos de los personajes
-    getApiData().then((charactersData) => {
-      setCharacters(charactersData);
-    });
+    //pido datos solo cuando no los tengo al arrancar
+    if (characters.lenght === 0) {
+      getApiData().then((charactersData) => {
+        setCharacters(charactersData);
+      });
+    }
   }, []); //cuándo ejecutar el useEffect
+
+  //guardo en ls cada vez que cambia characters
+  useEffect(() => {
+    console.log("guardando en ls", characters);
+    ls.set("characters", characters);
+  }, [characters]);
 
   //función manejadora
   const handleFilter = (data) => {
@@ -24,15 +33,10 @@ const App = () => {
     }
   };
 
-  //const characters = characters;
-  //console.log(characters);
-
   //render filter by name
   const filteredcharacters = characters.filter((character) => {
     return character.name.toLowerCase().includes(filterName.toLowerCase());
   });
-
-  //console.log("State filterName", filterName);
 
   //Route le pasa props a esta función
   const renderCharacterDetail = (props) => {
@@ -54,7 +58,11 @@ const App = () => {
       <Header />
       <Switch>
         <Route exact path="/">
-          <Main characters={filteredcharacters} handleFilter={handleFilter} />
+          <Main
+            characters={filteredcharacters}
+            handleFilter={handleFilter}
+            filterName={filterName}
+          />
         </Route>
         <Route path="/character/:id" render={renderCharacterDetail} />
       </Switch>
