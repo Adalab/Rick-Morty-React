@@ -6,7 +6,6 @@ const CharacterDetail = (props) => {
   return (
     <div>
       <Link to="/">Volver al inicio</Link>
-
       <section className="card__detail">
         <img
           className="card__detail-img"

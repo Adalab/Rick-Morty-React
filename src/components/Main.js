@@ -2,7 +2,6 @@ import React from "react";
 
 import Filters from "./Filters";
 import CharacterList from "./CharacterList";
-import CharacterDetail from "./CharacterDetail";
 
 function Main(props) {
   return (

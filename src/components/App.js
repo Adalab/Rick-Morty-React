@@ -18,7 +18,7 @@ const App = () => {
         setCharacters(charactersData);
       });
     }
-  }, []); //cuándo ejecutar el useEffect
+  }, []);
 
   //guardo en ls cada vez que cambia characters
   useEffect(() => {

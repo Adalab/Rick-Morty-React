@@ -2,6 +2,8 @@ import React from "react";
 import "../stylesheets/Card.scss";
 import live from "../images/live.png";
 import dead from "../images/death.png";
+import human from "../images/human.png";
+import alien from "../images/alien.png";
 import unknown from "../images/unknown.png";
 import { Link } from "react-router-dom";
 
@@ -13,6 +15,14 @@ const CharacterCard = (props) => {
       return dead;
     } else {
       return unknown;
+    }
+  };
+
+  const specie = () => {
+    if (props.character.specie === "Human") {
+      return human;
+    } else if (props.character.specie === "Alien") {
+      return alien;
     }
   };
 
@@ -30,6 +40,11 @@ const CharacterCard = (props) => {
             {props.character.specie} / {props.character.gender}
           </li>
           <li className="card__li"></li>
+          <img
+            className="card__li-icon"
+            src={specie()}
+            alt={props.character.specie}
+          />
           <img
             className="card__li-icon"
             src={status()}
