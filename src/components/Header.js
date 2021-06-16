@@ -6,9 +6,8 @@ function Header() {
   return (
     <header className="header">
       <img className="header__logo" src={logo} alt="Logo Rick and Morty" />
-      <div className="hero"></div>
-
       <h1 className="header__title">¿Cuánto sabes de tu personaje favorito?</h1>
+      <div className="hero"></div>
     </header>
   );
 }
