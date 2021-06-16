@@ -41,7 +41,7 @@ const App = () => {
     const foundCharacter = characters.find((character) => {
       return character.id === routeCharacterId;
     });
-    console.log(foundCharacter, routeCharacterId);
+
     if (foundCharacter !== undefined) {
       return <CharacterDetail />;
     } else {
