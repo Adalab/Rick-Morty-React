@@ -17,8 +17,8 @@ Se aceptan expresiones de gratitud tales como una cerveza 🍺 o un café ☕
 Puedes encontrar este proyecto en (http://beta.adalab.es/Rick-Morty-React/#/).
 
 <img src="src/images/photo-1.png" width=70%>
-<img src="src/images/phhoto-2.png" width=70%>
-<img src="src/images/phhoto-3.png" width=60%>
+<img src="src/images/photo-2.png" width=70%>
+<img src="src/images/photo-3.png" width=60%>
 
 ## Objetivos del proyecto
 
