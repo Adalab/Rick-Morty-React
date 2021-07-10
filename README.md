@@ -1,3 +1,16 @@
+### Proyecto incubadora
+Elige tus personaje favorito 📺 es una sencilla prueba de desarrollo de una aplicación web de búsqueda de personajes favoritos de la serie Rick and Morty. Te permite buscar tu personaje favorito, averiguar todo sobre él y guardarlo en local storage.
+
+Comenzando 🚀 Para utiilizarla solo necesitas cargar el enlace y....tendrás todas los personajes a tu disposición y a un clic de distancia.
+
+Instalación 🔧 Solo necesitas un navegador y ganas de pasar un buen rato.
+
+Construido con 🛠️ React, JavaScript (JS), HTML y CSS.
+
+Contribuyendo 🖇️ Este proyecto solo ha sido posible gracias al apoyo y la sabiduría de Yanelis, Dayana, Iván y Miguel de Adalab.
+
+Se aceptan expresiones de gratitud tales como una cerveza 🍺 o un café ☕
+
 # Rick and Morty
 
 Puedes encontrar este proyecto en (http://beta.adalab.es/modulo-3-evaluacion-final-Lorena999/#/).
@@ -9,15 +22,3 @@ Puedes encontrar este proyecto en (http://beta.adalab.es/modulo-3-evaluacion-fin
 4. Guardar los datos en el local storage los datos de los personajes y los datos del input del formulario.
 5. Se pueden incluir mejoras, como un filtro por especie o iconos de vivo/muerto. 
 
-### Proyecto incubadora
-Elige tus personaje favorito 📺 es una incipiente pueba del desarrollo de una aplicación web de búsqueda de personajes favoritos de la serie Rick and Morty. Te permite buscar tu personaje favorito, averiguar todo sobre él y guardarlo en local storage.
-
-Comenzando 🚀 Para utiilizarla solo necesitas cargar el enlace y....tendrás todas los personajes a tu disposición y a un clic de distancia.
-
-Instalación 🔧 Solo necesitas un navegador y ganas de pasar un buen rato.
-
-Construido con 🛠️ React, JavaScript (JS), HTML y CSS.
-
-Contribuyendo 🖇️ Este proyecto solo ha sido posible gracias al apoyo y la sabiduría de Yanelis, Dayana, Iván y Miguel de Adalab.
-
-Se aceptan expresiones de gratitud tales como una cerveza 🍺 o un café ☕
