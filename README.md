@@ -26,4 +26,9 @@ Puedes encontrar este proyecto en (http://beta.adalab.es/Rick-Morty-React/#/).
 2. Filtrar los personajes de la serie por su nombre desde un input de texto en la página de inicio.
 3. Detalle de cada pesonaje: al clicar sobre la ficha de un personaje, su información aparecerá a página completa en una nueva ruta (nombre, foto, especie, planeta de origen, nº de episodios en los que aparece y si está vivo/muerto).
 4. Guardar los datos en el local storage los datos de los personajes y los datos del input del formulario.
+<<<<<<< HEAD
 5. Se incluyen mejoras: filtro por especie e iconos de vivo/muerto.
+=======
+5. Se incluyen mejoras, como un filtro por especie e iconos de vivo/muerto. 
+
+>>>>>>> a3f83bf512e9fcb561a0ef0626cb308ff27724f5
