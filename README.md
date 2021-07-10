@@ -20,5 +20,5 @@ Puedes encontrar este proyecto en (http://beta.adalab.es/modulo-3-evaluacion-fin
 2. Filtrar los personajes de la serie por su nombre desde un input de texto en la página de inicio.
 3. Detalle de cada pesonaje: al clicar sobre la ficha de un personaje, su información aparecerá a página completa en una nueva ruta (nombre, foto, especie, planeta de origen, nº de episodios en los que aparece y si está vivo/muerto).
 4. Guardar los datos en el local storage los datos de los personajes y los datos del input del formulario.
-5. Se pueden incluir mejoras, como un filtro por especie o iconos de vivo/muerto. 
+5. Se incluyen mejoras, como un filtro por especie e iconos de vivo/muerto. 
 
