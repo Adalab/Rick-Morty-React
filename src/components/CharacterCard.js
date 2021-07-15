@@ -18,13 +18,7 @@ const CharacterCard = (props) => {
     }
   };
 
-  const specie = () => {
-    if (props.character.specie === "Human") {
-      return human;
-    } else if (props.character.specie === "Alien") {
-      return alien;
-    }
-  };
+  const specie = props.character.specie === "Human" ? human : alien;
 
   return (
     <Link to={`/character/${props.character.id}`}>
